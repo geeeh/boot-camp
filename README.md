@@ -10,6 +10,8 @@ Dojo allocator is a command line python project for room allocation in the Dojo.
     - python 3.4 or higher
     - SQLite3
     - python-pip
+    
+    ---
 ##setup
 
 - Create a virtual environment
@@ -78,11 +80,12 @@ The default value if it is not provided is N.
 
 ```load_state [--o=filename]``` loads data from a database into the application.
 
-
+---
 ### License
 
 - This app is provided under the [MIT License](https://opensource.org/licenses/MIT)
 
+---
 ##contributor
 
     - Godwin Gitonga

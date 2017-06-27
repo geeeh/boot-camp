@@ -26,7 +26,7 @@ source venv/bin/activate
 
 - Clone the repo
 
-> git clone https://github.com/Alweezy/alvin-mutisya-dojo-project.git
+> git clone https://github.com/geeeh/boot-camp.git
 
 - Once in the app directory, install Requirements
 ```pip install -r requirements.txt```

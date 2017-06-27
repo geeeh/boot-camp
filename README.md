@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/geeeh/boot-camp.svg?branch=master)](https://travis-ci.org/geeeh/boot-camp)
-[![Coverage Status](https://coveralls.io/repos/github/geeeh/boot-camp/badge.svg?branch=cp1)](https://coveralls.io/github/geeeh/boot-camp?branch=cp1)
+[![Coverage Status](https://coveralls.io/repos/github/geeeh/boot-camp/badge.svg?branch=master)](https://coveralls.io/github/geeeh/boot-camp?branch=master)
 
 #Dojo allocator
 

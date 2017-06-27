@@ -11,8 +11,8 @@ Dojo allocator is a command line python project for room allocation in the Dojo.
     - SQLite3
     - python-pip
     
-    ---
-##setup
+---
+#setup
 
 - Create a virtual environment
 ```
@@ -33,10 +33,9 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-
 ---
    
-##usage
+#usage
 
     - create_room <room_name>...
     - add_person <first_name> <last_name> <fellow|staff> [--c=N]
@@ -51,7 +50,7 @@ pip install -r requirements.txt
     - dojo (-h|--help)
     
  ---
-### Explanation:
+# Explanation:
 
 
 ```dojo create_room (living_space|office) <room_name>...```  command creates rooms in the Dojo
@@ -81,11 +80,11 @@ The default value if it is not provided is N.
 ```load_state [--o=filename]``` loads data from a database into the application.
 
 ---
-### License
+# License
 
 - This app is provided under the [MIT License](https://opensource.org/licenses/MIT)
 
 ---
-##contributor
+#contributor
 
     - Godwin Gitonga

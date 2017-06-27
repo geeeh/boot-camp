@@ -47,9 +47,6 @@ class Dojo(object):
             return colored(room_type + " " + room_name + " created successfully.",
                            "green")
 
-    def auto_allocate(self, room_type):
-        pass
-
     def add_person(self, first_name, last_name, person_type, accommodation="N"):
         """create person object and add it to people list and allocates the person a room"""
         name = first_name.lower() + " " + last_name.lower()
@@ -264,9 +261,6 @@ class Dojo(object):
                     for item in people_with_ids:
                         item = list(item)
                         print(str(item[0]) + "\t" + item[1])
-
-    def load_state(self, default_db="default_db"):
-        pass
 
     def reallocate_person(self, psn_id, room_name):
         """captures data of people to be reallocated"""

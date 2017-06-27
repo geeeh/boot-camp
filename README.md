@@ -52,12 +52,12 @@ source venv/bin/activate
 # Explanation:
 
 
-```dojo create_room (living_space|office) <room_name>...``` 
+``` dojo create_room (living_space|office) <room_name>...``` 
  command creates rooms in the Dojo
 > Using this command, the user can create as many rooms as possible by specifying multiple room names
   after the create_room command.
 
-```add_person <first_name> <last_name> <fellow|staff> [--c]``` 
+``` add_person <first_name> <last_name> <fellow|staff> [--c]``` 
 adds a person to the system and allocates the person
  a random room
 >--c here is an optional argument which can be either Y or N.
@@ -66,7 +66,7 @@ Its default value when it is not provided is N.
 ```print_room <room_name>``` 
 prints  the names of all the people in room_name on the screen.
 
-```print_allocations [--o=filename]```  
+``` print_allocations [--o=filename] ```  
 prints a list of allocations onto the screen.
 > Specifying the optional -o option here outputs the registered allocations to a txt file.
 

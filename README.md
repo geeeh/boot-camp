@@ -29,9 +29,8 @@ source venv/bin/activate
 > git clone https://github.com/Alweezy/alvin-mutisya-dojo-project.git
 
 - Once in the app directory, install Requirements
-```
-pip install -r requirements.txt
-```
+```pip install -r requirements.txt```
+
 
 ---
    

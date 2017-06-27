@@ -437,13 +437,6 @@ class Dojo(object):
         else:
             self.last_position = 0
 
-my_instance = Dojo()
-my_instance.add_person("Godwin", "Gitonga", "staff")
-my_instance.add_person("Godwin", "Gitonga", "staff")
-my_instance.add_person("Godwin", "Gitonga", "staff")
-my_instance.add_person("Godwin", "Gitonga", "staff")
-my_instance.create_room("office", "blue")
-print(my_instance.office_allocations)
 
 
 

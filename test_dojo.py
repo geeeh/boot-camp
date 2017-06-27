@@ -97,6 +97,22 @@ class TestRoom(TestCase):
         output = sys.stdout.getvalue()
         self.assertIn("unallocated living space", output)
 
+    def test_auto_allocate_office(self):
+        self.my_instance.add_person("godwin", "gitonga", "staff")
+        self.assertIn("godwin gitonga", self.my_instance.office_allocations["unallocated"])
+        self.my_instance.create_room("office", "blue")
+        self.assertIn("godwin gitonga", self.my_instance.office_allocations["blue"])
+        self.assertNotIn("godwin gitonga", self.my_instance.office_allocations["unallocated"])
+
+    def test_auto_allocate_lspace(self):
+        self.my_instance.create_room("office", "blue")
+        self.my_instance.add_person("godwin", "gitonga", "fellow", "Y")
+        self.assertIn("godwin gitonga", self.my_instance.living_space_allocations["unallocated"])
+        self.my_instance.create_room("living_space", "white")
+        self.assertIn("godwin gitonga", self.my_instance.living_space_allocations["white"])
+        self.assertNotIn("godwin gitonga", self.my_instance.living_space_allocations["unallocated"])
+
+
     def test_print_room(self):
         """test for the printing a rooms occupants"""
         self.my_instance.create_room("office", "blue")

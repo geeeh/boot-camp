@@ -47,6 +47,43 @@ class Dojo(object):
             return colored(room_type + " " + room_name + " created successfully.",
                            "green")
 
+    def auto_allocate(self, room_type):
+        if room_type == "office":
+            person_names = self.office_allocations["unallocated"]
+            self.office_allocations["unallocated"] = []
+            person_ids = self.office_ids["unallocated"]
+            self.office_ids["unallocated"] = []
+            people_with_ids = zip(person_ids, person_names)
+            office_allocated = self.get_office()
+            for item in people_with_ids:
+                item = list(item)
+                self.office_allocations[office_allocated].append(item[1])
+                self.office_ids[office_allocated].append(item[0])
+                if office_allocated != "unallocated":
+                    print(
+                        colored(item[1] + " id: " + str(item[0]) + ", Successfully added and allocated office " +
+                                office_allocated, "green"))
+                else:
+                    print(colored(item[1] + " id: " + str(item[0]) + " unallocated office", "red"))
+
+        else:
+            person_names = self.living_space_allocations["unallocated"]
+            self.living_space_allocations["unallocated"] = []
+            person_ids = self.lspace_ids["unallocated"]
+            self.lspace_ids["unallocated"] = []
+            people_with_ids = zip(person_ids, person_names)
+            living_space_allocated = self.get_living_space()
+            for item in people_with_ids:
+                item = list(item)
+                self.living_space_allocations[living_space_allocated].append(item[1])
+                self.lspace_ids[living_space_allocated].append(item[0])
+                if living_space_allocated != "unallocated":
+                    print(
+                        colored(item[1] + " id: " + str(item[0]) + ", Successfully added and allocated office " +
+                                living_space_allocated, "green"))
+                else:
+                    print(colored(item[1] + " id: " + str(item[0]) + " unallocated office", "red"))
+
     def add_person(self, first_name, last_name, person_type, accommodation="N"):
         """create person object and add it to people list and allocates the person a room"""
         name = first_name.lower() + " " + last_name.lower()
@@ -400,6 +437,13 @@ class Dojo(object):
         else:
             self.last_position = 0
 
+my_instance = Dojo()
+my_instance.add_person("Godwin", "Gitonga", "staff")
+my_instance.add_person("Godwin", "Gitonga", "staff")
+my_instance.add_person("Godwin", "Gitonga", "staff")
+my_instance.add_person("Godwin", "Gitonga", "staff")
+my_instance.create_room("office", "blue")
+print(my_instance.office_allocations)
 
 
 

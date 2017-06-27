@@ -1,0 +1,10 @@
+# .coveragerc to control coverage.py
+[run]
+omit =
+                */site-packages/*
+                */sqlalchemy/*
+                */termcolor.py/*
+                */sqlite3/*
+                */envs/*
+                */decimal.py
+                */numbers.py
